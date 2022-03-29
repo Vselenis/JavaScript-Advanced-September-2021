@@ -19,7 +19,7 @@ class Parking{
             throw new Error(`${carObj.carNumber} needs to pay before leaving the parking lot.`)
         }
         const index = this.vehicles.indexOf(carObj)
-        this.vehicles.shift(index)
+        this.vehicles.slice(index, 1)
         return `${carNumber} left the parking lot.`
     }
 
